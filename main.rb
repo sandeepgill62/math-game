@@ -14,17 +14,20 @@ end
 
 player1 = Player.new('Player 1', 3)
 player2 = Player.new('Player 2', 3)
+
+player = player2
 question1 = Question.new()
 
-puts player1.getPlayerName() + ": " + question1.getQuestion()
+puts player.getPlayerName() + ": " + question1.getQuestion()
 
 puts question1.getAnswer()
 inputAnswer = gets.chomp
 
 if inputAnswer == question1.getAnswer()
-  puts "okay"
+  puts player.getPlayerName() + ": " "YES. You are correct!"
 else
-  puts "not okay"
+  puts player.getPlayerName() + ": " "Seriously? No!"
+  player.reduceLives()
 end
 
 puts "P1: " + player1.getPlayerLives().to_s + "/3" + " vs " + "p2: " + player2.getPlayerLives().to_s + "/3"

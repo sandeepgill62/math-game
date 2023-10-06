@@ -14,5 +14,9 @@ class Player
     @lives
   end
 
+  def reduceLives()
+    @lives -= 1
+  end
+
 end
 
