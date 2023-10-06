@@ -16,5 +16,3 @@ class Player
 
 end
 
-player1 = Player.new('Player 1', 0)
-puts player1.getPlayerName()
