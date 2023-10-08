@@ -47,13 +47,16 @@ loop do
 
   # check if any player is out of lives
   if current_player.getPlayerLives() == 0
+    puts ""
     if turn == 1
       puts "player 1 win with a score of " + player1.getPlayerLives().to_s + "/3" 
     else
       puts "player 2 win with a score of " + player2.getPlayerLives().to_s + "/3" 
     end
   
-    break;
+    puts "----- GAME OVER -----" 
+    puts "Good Bye!"
+    break
   end
 
 end
